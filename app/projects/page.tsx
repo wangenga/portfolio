@@ -133,7 +133,7 @@ const Projects = () => {
                     More Projects Coming Soon
                   </h3>
                   <p className="text-sm text-muted-foreground">
-                    I'm constantly working on new projects and learning new technologies
+                    I&#39;m constantly working on new projects and learning new technologies
                   </p>
                 </CardContent>
               </Card>
