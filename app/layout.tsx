@@ -16,6 +16,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Daisy Wangenga",
   description: "Her Portfolio",
+  icons: {
+    icon: [
+      { url: "/favicon-for-public/web-app-manifest-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon-for-public/web-app-manifest-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/favicon-for-public/web-app-manifest-192x192.png",
+  },
 };
 
 export default function RootLayout({
