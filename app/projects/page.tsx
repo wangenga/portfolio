@@ -24,9 +24,9 @@ const Projects = () => {
     {
       id: 2,
       title: "My Portfolio",
-      description: "Personal portfolio showcasing web development skills and projects",
+      description: "Personal portfolio showcasing development skills and projects",
       technologies: ["React", "Tailwind CSS", "TypeScript"],
-      status: "in-progress", 
+      status: "completed", 
       category: "Personal Project",
       githublink: "https://github.com/wangenga/portfolio",
       sitelink: "https://daisywangenga.vercel.app/"
@@ -36,7 +36,7 @@ const Projects = () => {
       title: "Simple Shell",
       description: "a progressive implementation of a Simple UnixShell done in C. It uses POSIX to implement many of the same functionalities of the Ken Thompson's Shell",
       technologies: ["C", "Shell"],
-      status: "complete", 
+      status: "completed", 
       category: "Collaborative Project",
       githublink: "https://github.com/MauriceNzai/simple_shell"
     }
