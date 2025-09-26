@@ -30,6 +30,15 @@ const Projects = () => {
       category: "Personal Project",
       githublink: "https://github.com/wangenga/portfolio",
       sitelink: "https://daisywangenga.vercel.app/"
+    },
+    {
+      id: 3,
+      title: "Simple Shell",
+      description: "a progressive implementation of a Simple UnixShell done in C. It uses POSIX to implement many of the same functionalities of the Ken Thompson's Shell",
+      technologies: ["C", "Shell"],
+      status: "complete", 
+      category: "Collaborative Project",
+      githublink: "https://github.com/MauriceNzai/simple_shell"
     }
   ];
 
