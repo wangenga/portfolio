@@ -23,7 +23,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Portfolio Website",
+      title: "My Portfolio",
       description: "Personal portfolio showcasing web development skills and projects",
       technologies: ["React", "Tailwind CSS", "TypeScript"],
       status: "in-progress", 
