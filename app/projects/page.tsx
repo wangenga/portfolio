@@ -13,13 +13,13 @@ const Projects = () => {
   const pjs = [
     {
       id: 1,
-      title: "E-commerce Website",
-      description: "Responsive e-commerce platform built with React and WordPress integration",
-      technologies: ["React", "WordPress", "CSS", "JavaScript"],
+      title: "Venuease",
+      description: "A web platform for hosts to list venues and clients to search, book, and manage event spaces.",
+      technologies: ["Next.js", "React.js", "Tailwind CSS", "Drizzle ORM",],
       status: "completed",
-      category: "Web Development",
-      githublink: "https://github.com/wangenga",
-      sitelink: "https://github.com/wangenga"
+      category: "Event Venue Booking System",
+      githublink: "https://github.com/wangenga/venuease",
+      sitelink: "https://venuease.vercel.app/"
     },
     {
       id: 2,
@@ -28,16 +28,8 @@ const Projects = () => {
       technologies: ["React", "Tailwind CSS", "TypeScript"],
       status: "in-progress", 
       category: "Personal Project",
-      githublink: "https://github.com/wangenga",
-      sitelink: "https://github.com/wangenga"
-    },
-    {
-      id: 3,
-      title: "Client Management System",
-      description: "Custom website management system for client training and support",
-      technologies: ["WordPress", "JavaScript", "MySQL"],
-      status: "completed",
-      category: "Client Work"
+      githublink: "https://github.com/wangenga/portfolio",
+      sitelink: "https://daisywangenga.vercel.app/"
     }
   ];
 

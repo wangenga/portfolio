@@ -56,6 +56,15 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
+.text-purple-glow {
+  /* soft + spread glow around each character */
+  text-shadow:
+    0 0 4px rgba(162, 145, 248, 0.219),
+    0 0 8px rgba(173, 156, 253, 0.178),
+    0 0 12px rgba(186, 173, 252, 0.082);
+}
+
+
 .topnav {
   position: fixed;
   top: 0;
@@ -164,10 +173,21 @@ body {
 .bg-primary {
   background-color: rgb(66, 63, 233);
 }
+.bg-accent{
+  background-color: #9270ff;
+}
+
+.border-primary{
+  border-color: rgb(66, 63, 233);
+}
+.border-accent{
+  border-color: #9270ff;
+}
 
 .text-primary{
   color: rgb(66, 63, 233)
 }
+
 
 .text-primary-foreground {
   color: hsl(210, 40%, 98%);
@@ -179,6 +199,9 @@ body {
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
 }
 
 
@@ -200,5 +223,19 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow:
+      0 0 4px rgba(66, 63, 233, 0.1),
+      0 0 8px rgba(66, 63, 233, 0.1);
+  }
+  50% {
+    text-shadow:
+      0 0 8px rgba(66, 63, 233, 0.2),
+      0 0 16px rgba(66, 63, 233, 0.2),
+      0 0 24px rgba(66, 63, 233, 0.15);
   }
 }
