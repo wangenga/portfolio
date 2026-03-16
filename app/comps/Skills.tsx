@@ -5,18 +5,21 @@ import { CodeIcon, DatabaseIcon, GlobeIcon, PaletteIcon } from 'lucide-react'
 
 const Skills = () => {
     const skills = [
-        { name: "HTML5 / CSS3", icon: PaletteIcon, level: "Advanced" },
-        { name: "JavaScript (ES6+)", icon: CodeIcon, level: "Intermediate–Advanced" },
+        { name: "TypeScript", icon: CodeIcon, level: "Intermediate–Advanced" },
         { name: "React.js", icon: CodeIcon, level: "Intermediate" },
         { name: "Next.js", icon: CodeIcon, level: "Intermediate" },
+        { name: "Kotlin", icon: CodeIcon, level: "Intermediate–Advanced" },
+        { name: "Jetpack Compose", icon: CodeIcon, level: "Intermediate" },
         { name: "Tailwind CSS", icon: PaletteIcon, level: "Intermediate–Advanced" },
         { name: "PostgreSQL", icon: DatabaseIcon, level: "Intermediate" },
+        { name: "Firebase", icon: DatabaseIcon, level: "Intermediate" },
+        { name: "Room Database", icon: DatabaseIcon, level: "Intermediate" },
         { name: "Supabase", icon: DatabaseIcon, level: "Intermediate" },
-        { name: "Drizzle ORM", icon: DatabaseIcon, level: "Intermediate" },
         { name: "Node.js / Express", icon: CodeIcon, level: "Beginner–Intermediate" },
         { name: "REST APIs", icon: GlobeIcon, level: "Intermediate" },
         { name: "Git & GitHub", icon: GlobeIcon, level: "Intermediate–Advanced" },
         { name: "Docker / WSL2", icon: GlobeIcon, level: "Beginner–Intermediate" },
+        { name: "Hilt Dependency Injection", icon: CodeIcon, level: "Intermediate" },
         { name: "Google Analytics", icon: GlobeIcon, level: "Beginner" },
         { name: "WordPress (Avada, Edu Press)", icon: GlobeIcon, level: "Intermediate" },
         { name: "Shopify App Development", icon: GlobeIcon, level: "Beginner–Intermediate" }

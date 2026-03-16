@@ -39,6 +39,24 @@ const Projects = () => {
       status: "completed", 
       category: "Collaborative Project",
       githublink: "https://github.com/MauriceNzai/simple_shell"
+    },
+    {
+      id: 4,
+      title: "TrustPeak",
+      description: "A platform for building and managing trust-based applications",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      status: "in progress",
+      category: "Web Application",
+      sitelink: "https://trustpeak.vercel.app/"
+    },
+    {
+      id: 5,
+      title: "MoneyHub",
+      description: "A secure Android financial management app with biometric authentication, encrypted database, and real-time expense tracking with visual charts and analytics.",
+      technologies: ["Kotlin", "Jetpack Compose", "Firebase", "Room Database", "Hilt", "SQLCipher"],
+      status: "completed",
+      category: "Mobile Finance App",
+      githublink: "https://github.com/wangenga/MoneyHub"
     }
   ];
 

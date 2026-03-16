@@ -12,13 +12,19 @@ const about = () => {
   const skills = [
     "HTML5 / CSS3",
     "JavaScript (ES6+)",
+    "TypeScript",
     "React.js",
     "Next.js",
+    "Kotlin",
+    "Jetpack Compose",
     "Tailwind CSS",
     "PostgreSQL",
+    "Firebase",
+    "Room Database",
     "Drizzle ORM",
     "Node.js / Express",
     "REST APIs",
+    "Hilt Dependency Injection",
   ];
 
   const softwareTools = [
@@ -28,7 +34,8 @@ const about = () => {
     "WordPress",
     "Shopify",
     "Supabase",
-    "Drizzle ORM",
+    "Android Studio",
+    "SQLCipher",
   ];
 
   const softSkills = [
@@ -87,9 +94,7 @@ const about = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg leading-relaxed text-muted-foreground">
-                    Motivated developer with knowledge in web development, seeking to apply my technical skills 
-                    and problem solving abilities in dynamic environments. I am patient, curious and detail-oriented, 
-                    and I strive to deliver high quality products. I am hardworking and ready to learn more.
+                    I am someone who thrives in the space between a question and an answer. My professional identity is built on curiosity and the belief that there is always a more efficient way to navigate a challenge. I don't just look for solutions; I look for the 'why' behind the problem, ensuring that the impact of my work lasts longer than the task itself.
                   </p>
                 </CardContent>
               </Card>
@@ -149,8 +154,23 @@ const about = () => {
                 </CardHeader>
                 <CardContent>
                 <div className="space-y-6">
-                  <div className="border-l-2 border-primary pl-6 relative">
-                    <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
+                  <div className="border-l-2 border-accent pl-6 relative">
+                    <div className="absolute -left-2 top-0 w-4 h-4 bg-accent rounded-full"></div>
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                      <h3 className="text-xl font-semibold">AI Essentials for Software Developers Program</h3>
+                      <div className="flex items-center gap-1 text-muted-foreground">
+                        <Calendar className="h-4 w-4" />
+                        <span>March 2026 - Present</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1 text-muted-foreground mb-2">
+                      <MapPin className="h-4 w-4" />
+                      <span>Moringa School</span>
+                    </div>
+                  </div>
+
+                  <div className="border-l-2 border-accent pl-6 relative">
+                    <div className="absolute -left-2 top-0 w-4 h-4 bg-accent rounded-full"></div>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                       <h3 className="text-xl font-semibold">Bachelor of Science Computer Science</h3>
                       <div className="flex items-center gap-1 text-muted-foreground">
@@ -164,7 +184,7 @@ const about = () => {
                     </div>
                   </div>
 
-                  <div className="border-l-2 border-accent pl-6 relative">
+                   <div className="border-l-2 border-accent pl-6 relative">
                     <div className="absolute -left-2 top-0 w-4 h-4 bg-accent rounded-full"></div>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                       <h3 className="text-xl font-semibold">Proficiency in Chinese Language</h3>
@@ -194,6 +214,24 @@ const about = () => {
                 <div className="space-y-6">
                   <div className="border-l-2 border-primary pl-6 relative">
                     <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                      <h3 className="text-xl font-semibold">Full Stack Developer</h3>
+                      <div className="flex items-center gap-1 text-muted-foreground">
+                        <Calendar className="h-4 w-4" />
+                        <span>May 2025 - Present</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1 text-muted-foreground mb-4">
+                      <MapPin className="h-4 w-4" />
+                      <span>TrustPeak, Remote</span>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                     Building and maintaining the Trustpeak property management platform across the entire stack using React, TypeScript, and Tailwind CSS. Architecting scalable database solutions with Supabase and implementing end-to-end features from conception to production. Designing reusable component libraries, optimizing API integrations, and managing complex authentication flows while ensuring code quality through Vitest testing. Collaborating with the team to enhance user experiences, scale platform reliability, and maintain a clean, modern codebase.
+                    </p>
+                  </div>
+
+                  <div className="border-l-2 border-accent pl-6 relative">
+                    <div className="absolute -left-2 top-0 w-4 h-4 bg-accent rounded-full"></div>
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                       <h3 className="text-xl font-semibold">Web Developer</h3>
                       <div className="flex items-center gap-1 text-muted-foreground">
