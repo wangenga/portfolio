@@ -94,7 +94,7 @@ const about = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg leading-relaxed text-muted-foreground">
-                    I am someone who thrives in the space between a question and an answer. My professional identity is built on curiosity and the belief that there is always a more efficient way to navigate a challenge. I don't just look for solutions; I look for the 'why' behind the problem, ensuring that the impact of my work lasts longer than the task itself.
+                    I am someone who thrives in the space between a question and an answer. My professional identity is built on curiosity and the belief that there is always a more efficient way to navigate a challenge. I don&apos;t just look for solutions; I look for the &apos;why&apos; behind the problem, ensuring that the impact of my work lasts longer than the task itself.
                   </p>
                 </CardContent>
               </Card>
