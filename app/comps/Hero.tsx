@@ -42,9 +42,11 @@ const Hero = () => {
                   View GitHub
                 </a>
               </Button>
-              <Button variant="secondary" size="lg" className="group hover:scale-105 transition-transform">
-                <DownloadIcon className="h-5 w-5 mr-2 group-hover:translate-y-1 transition-transform" />
-                Download CV
+              <Button variant="secondary" size="lg" className="group hover:scale-105 transition-transform" asChild>
+                <a href="/Daisy Wangenga Resume.pdf" download>
+                  <DownloadIcon className="h-5 w-5 mr-2 group-hover:translate-y-1 transition-transform" />
+                  Download CV
+                </a>
               </Button>
             </div>
 

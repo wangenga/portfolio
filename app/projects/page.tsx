@@ -57,6 +57,15 @@ const Projects = () => {
       status: "completed",
       category: "Mobile Finance App",
       githublink: "https://github.com/wangenga/MoneyHub"
+    },
+    {
+      id: 6,
+      title: "GeoPrompt",
+      description: "An AI-powered travel guessing game where players identify mystery cities based on cultural clues. Features adaptive difficulty with progressively obvious hints and shareable result cards.",
+      technologies: ["SvelteKit", "Tailwind CSS", "Node.js", "Express.js", "Google Gemini API"],
+      status: "completed",
+      category: "AI Gaming Application",
+      sitelink: "https://geo-prompt.vercel.app/"
     }
   ];
 

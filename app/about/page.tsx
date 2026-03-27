@@ -25,6 +25,7 @@ const about = () => {
     "Node.js / Express",
     "REST APIs",
     "Hilt Dependency Injection",
+    "Generative AI",
   ];
 
   const softwareTools = [
