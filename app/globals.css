@@ -1,12 +1,22 @@
 @import "tailwindcss";
 
+
 :root {
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(222.2, 84%, 4.9%);
-  --secondary: hsl(245, 20%, 96%);
-  --secondary-30: hsla(245, 20%, 96%, 0.3);
-  --primary: #4b2ee1;
-  --accent: #9270ff;
+  --cream: #faf7f0;
+  --cream-deep: #f2ede1;
+  --ink: #2b2126;
+  --ink-soft: #6e6859;
+  --ink-faint: #a39c8a;
+  --purple: #4b2ee1;
+  --purple-tint: #ede9fb;
+  --line: #e3ddce;
+
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --secondary: var(--cream-deep);
+  --secondary-30: rgba(242, 237, 225, 0.5);
+  --primary: var(--purple);
+  --accent: var(--purple);
 }
 
 .dark {
@@ -20,6 +30,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-instrument-serif);
 }
 
 
@@ -27,7 +38,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans) Arial, Helvetica, sans-serif;
 }
 
 .bg-light-gradient {
@@ -39,22 +50,42 @@ body {
   );
 }
 
+/*Type system */
+.eyebrow {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.01em;
+}
+
+.eyebrow::before{
+  content: "//";
+  color: var(--ink-faint);
+}
+
+.serif{
+  font-family: var(--font-instrument-serif), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.text-muted-foreground{
+  color: var(--ink-soft);
+}
+
 .namegradient {
-  background: linear-gradient(to right, rgb(66, 63, 233), rgb(125, 106, 251));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  font-size: 1.25rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-family: var(--font-instrument-serif), Georgia, serif;
+  color: var(--ink);
 }
 
 .text-muted-foreground {
   color: #6b7280;
 }
 
-.shadow-elegant {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
+
 
 .text-purple-glow {
   /* soft + spread glow around each character */
@@ -65,62 +96,85 @@ body {
 }
 
 
+
+
+.myblue{
+  color: var(--purple);
+}
+
+/*Buttons*/
+
+.my-gradient-button {
+  background: var(--purple);
+  color: var(--cream);
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.my-gradient-button:hover {
+  background: var(--purple);
+  opacity: 0.85;
+}
+
+.site-link-button{
+  background-color: var(--purple);
+  color: var(--cream);
+}
+
+.site-link-button:hover{
+  opacity: 0.85;
+  background-color: var(--purple);
+}
+
+
+.code-button{
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.code-button:hover{
+  background-color:var(--purple-tint);
+  border: 1;
+  border-color: var(--purple);
+  color: var(--purple);
+}
+
+/* Surfaces */
+
+.card-flat{
+  background: var(--cream-deep);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.shadow-elegant {
+  box-shadow: none;
+  border: 1px solid var(--line);
+}
+
 .topnav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 50;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgb(228, 228, 231);
-}
-
-.myblue{
-  color: rgb(66, 63, 233);
-}
-
-.my-gradient-button {
-  background: linear-gradient(to right, #5b4eeb, #8a5bdb);
-  color: white;
-  padding: 0.5rem 1.25rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-.my-gradient-button:hover {
-  background: linear-gradient(to right, #3730a3, #6d28d9);
-}
-
-.site-link-button{
-  background-color: rgb(66, 63, 233);
-  color: #ffffff;
-}
-
-.site-link-button:hover{
-  background-color: rgb(95, 93, 233);
-}
-
-
-.code-button{
-  border-color: rgb(226, 232, 240);
-}
-
-.code-button:hover{
-  background-color: rgb(125, 106, 251);
-  border: 1;
-  border-color: rgb(226, 232, 240);
-  color: #ffffff;
+  background: rgba(250, 247, 240, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
 }
 
 .about-page {
   min-height: 100vh;
   padding-top: 5rem;
-  background: linear-gradient(to bottom right, #f5f5f5, #ffffff);
+  background: var(--cream);
   overflow: hidden;
   position: relative;
 }
+
+/* floating elements */
 
 .floating-elements {
   position: absolute;
@@ -132,76 +186,63 @@ body {
 .floating-circle {
   position: absolute;
   border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
+  animation: float 10s ease-in-out infinite;
+  background-color: var(--purple-tint);
+  opacity: 0.5;
 }
 
 .float1 {
-  top: 10rem;
-  right: 2.5rem;
-  width: 6rem;
-  height: 6rem;
-  background-color: rgba(170, 144, 241, 0.118);
+  top: 8rem;
+  right: 4rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .float2 {
-  bottom: 33%;
-  left: 5rem;
-  width: 8rem;
-  height: 8rem;
-  background-color: rgba(170, 144, 241, 0.2);
-  animation-delay: 1s;
-}
-
-.float3 {
-  top: 50%;
-  right: 25%;
-  width: 5rem;
-  height: 5rem;
-  background-color: rgba(170, 144, 241, 0.118);
+  bottom: 30%;
+  left: 6rem;
+  width: 6rem;
+  height: 6rem;
   animation-delay: 2s;
 }
 
+.float3,
 .float4 {
-  top: 10%;
-  left: 10%;
-  width: 8rem;
-  height: 8rem;
-  background-color: rgba(170, 144, 241, 0.182);
-  animation-delay: 1.5s;
+  display: none;
 }
 
 .bg-primary {
-  background-color: rgb(66, 63, 233);
+  background-color: var(--purple);
 }
 .bg-accent{
-  background-color: #9270ff;
+  background-color: var(--purple);
 }
 
 .border-primary{
-  border-color: rgb(66, 63, 233);
+  border-color: var(--purple);
 }
 .border-accent{
-  border-color: #9270ff;
+  border-color: var(--purple);
 }
 
 .text-primary{
-  color: rgb(66, 63, 233)
+  color: var(--purple);
 }
 
 
 .text-primary-foreground {
-  color: hsl(210, 40%, 98%);
+  color: var(--cream);
 }
 
 .animate-fade-in {
-  animation: fade-in 0.6s ease-out both;
+  animation: fade-in 0.7s ease-out both;
 }
 
 .animate-float {
-  animation: float 3s ease-in-out infinite;
+  animation: float 5s ease-in infinite;
 }
 .animate-glow {
-  animation: glow 3s ease-in-out infinite;
+  animation: none;
 }
 
 
@@ -218,7 +259,7 @@ body {
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
   100% {
     opacity: 1;
