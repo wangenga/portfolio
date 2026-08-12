@@ -33,12 +33,12 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   href={item.path}
-                  className={pathname === item.path ? "myblue" : "text-black hover:text-gray-500" } 
+                  className={`font-mono text-sm ${pathname === item.path ? "myblue" : "text-black hover:text-gray-500"}`} 
                 >
                   {item.name}
                 </Link>
               ))}
-                <Button variant="default" size="sm" className='my-gradient-button'>
+                <Button variant="default" size="sm" className='my-gradient-button' asChild>
                   <a href="mailto:daisyimg65@gmail.com">Contact</a>
                 </Button>
             </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
                   <Link
                     key={item.name}
                     href={item.path}
-                    className={pathname === item.path ? "myblue" : "text-black hover:text-gray-500" }
+                    className={`font-mono text-sm ${pathname === item.path ? "myblue" : "text-black hover:text-gray-500" }`}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}

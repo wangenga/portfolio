@@ -13,6 +13,15 @@ const Projects = () => {
   const pjs = [
     {
       id: 1,
+      title: "Green Day Bank",
+      description: "A command-line banking application implemented in Java as the final project for kood.",
+      technologies: ["Java"],
+      status: "completed",
+      category: "Command Line App",
+      githublink: "https://github.com/wangenga/bankingApp"
+    },
+    {
+      id: 2,
       title: "Venuease",
       description: "A web platform for hosts to list venues and clients to search, book, and manage event spaces.",
       technologies: ["Next.js", "React.js", "Tailwind CSS", "Drizzle ORM",],
@@ -22,7 +31,7 @@ const Projects = () => {
       sitelink: "https://venuease.vercel.app/"
     },
     {
-      id: 2,
+      id: 3,
       title: "My Portfolio",
       description: "Personal portfolio showcasing development skills and projects",
       technologies: ["React", "Tailwind CSS", "TypeScript"],
@@ -32,7 +41,7 @@ const Projects = () => {
       sitelink: "https://daisywangenga.vercel.app/"
     },
     {
-      id: 3,
+      id: 4,
       title: "Simple Shell",
       description: "a progressive implementation of a Simple UnixShell done in C. It uses POSIX to implement many of the same functionalities of the Ken Thompson's Shell",
       technologies: ["C", "Shell"],
@@ -41,7 +50,7 @@ const Projects = () => {
       githublink: "https://github.com/MauriceNzai/simple_shell"
     },
     {
-      id: 4,
+      id: 5,
       title: "TrustPeak",
       description: "A platform for building and managing trust-based applications",
       technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
@@ -50,14 +59,14 @@ const Projects = () => {
       sitelink: "https://trustpeak.vercel.app/"
     },
     {
-      id: 5,
+      id: 6,
       title: "MoneyHub",
       description: "A secure Android financial management app with biometric authentication, encrypted database, and real-time expense tracking with visual charts and analytics.",
       technologies: ["Kotlin", "Jetpack Compose", "Firebase", "Room Database", "Hilt", "SQLCipher"],
       status: "completed",
       category: "Mobile Finance App",
       githublink: "https://github.com/wangenga/MoneyHub"
-    }
+    },
   ];
 
   const getStatusColor = (status: string) => {
@@ -79,106 +88,96 @@ const Projects = () => {
         <FloatingElements />
         <Container className='mx-auto px-4 py-12 relative'>
           <div className='max-w-6xl mx-auto'>
-            <div className='text-center mb-12'>
-              <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#4b2ee1] to-[#9270ff] bg-clip-text text-transparent'>
-                Projects
+            <div className='text-center mb-14'>
+              <p className="eyebrow justify-center flex mb-3">projects</p>
+              <h1 className='serif text-5xl md:text-6xl mb-4'>
+                Selected work
               </h1>
               <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
                 A showcase of my web development work and technical projects
               </p>
             </div>
-
+ 
             <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
               {pjs.map((pj) => (
-                <Card key={pj.id} className='border-zinc-200  hover:shadow-lg transition-shadow duration-300 '>
-                  <CardHeader>
-                    <div className='flex items-start justify-between'>
-                      <CardTitle className='text-xl'>{pj.title}</CardTitle>
-                      <Badge
-                        variant="outline"
-                        className={`text-xs ${getStatusColor(pj.status)}`}
-                      >
+                <div key={pj.id} className='card-flat hover:shadow-lg p-6 transition-shadow duration-300 flex flex-col'>
+                    <div className='flex items-start justify-between mb-2'>
+                      <h3 className='text-xl serif'>{pj.title}</h3>
+                      <span className='font-mono text-xs text-muted-foreground'>
                         {pj.status}
-                      </Badge>
+                      </span>
                     </div>
-                    <Badge variant='secondary' className='text-[#423fe9] font-semibold bg-[#F3F3F7]  w-fit'>
+                    <Badge variant='secondary' className='text-[var(--purple)] font-medium bg-[var(--purple-tint)] w-fit mb-4'>
                       {pj.category}
                     </Badge>
-                  </CardHeader>
-                  <CardContent>
-                    <p className='text-muted-foreground mb-4 leading-relaxed'>
+ 
+                    <p className='text-muted-foreground mb-4 leading-relaxed flex-1'>
                       {pj.description}
                     </p>
-                    <div className='mb-4'>
+                    <div className='mb-5'>
                       <div className='flex flex-wrap gap-2'>
                         {pj.technologies.map((tech) => (
-                          <Badge key={tech} variant="outline" className='text-xs border-[#E2E8F0]'>
+                          <Badge key={tech} variant="outline" className='text-xs border-[var(--line)] text-muted-foreground'>
                             {tech}
                           </Badge>
                         ))}
                       </div>
                     </div>
-                  
+ 
                     <div className='flex gap-2'>
                       {pj.githublink && (
                         <Button variant="outline" size="sm" className='flex-1 code-button' asChild>
                           <a href={pj.githublink} target="_blank" rel="noopener noreferrer">
                             <GithubIcon className='h-4 w-4 mr-2' />
-                            GitHub Link
+                            GitHub
                           </a>
                         </Button>
                       )}
-
+ 
                       {pj.sitelink && (
                         <Button size="sm" className='flex-1 site-link-button' asChild>
                           <a href={pj.sitelink} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className='h-4 w-4 mr-2' />
-                            Site Link
+                            Visit site
                           </a>
                         </Button>
                       )}
-                    </div>  
-                  </CardContent>
-                </Card>
+                    </div>
+                </div>
               ))}
-
-
+ 
               {/* Add More Projects Card */}
-              <Card className="shadow-elegant hover:shadow-lg transition-shadow duration-300 border-dashed border-2 border-[#423fe94d]">
-                <CardContent className="flex flex-col items-center justify-center h-full text-center p-8">
-                  <Plus className="h-12 w-12 text-[#423fe94d] mb-4" />
-                  <h3 className="text-lg font-semibold mb-2 text-muted-foreground">
-                    More Projects Coming Soon
+              <div className="card-flat border-dashed p-8 flex flex-col items-center justify-center text-center">
+                  <Plus className="h-8 w-8 text-[var(--ink-faint)] mb-4" />
+                  <h3 className="text-lg font-medium mb-2 text-muted-foreground">
+                    More projects coming soon
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     I&#39;m constantly working on new projects and learning new technologies
                   </p>
-                </CardContent>
-              </Card>
+              </div>
             </div>
-
+ 
             {/* GitHub CTA */}
-            <div className="text-center mt-12  ">
-              <Card className="inline-block border-zinc-200">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">Want to see more?</h3>
-                  <p className="text-muted-foreground mb-4">
+            <div className="text-center mt-14">
+              <div className="card-flat inline-block p-8">
+                  <h3 className="text-xl serif mb-2">Want to see more?</h3>
+                  <p className="text-muted-foreground mb-5">
                     Check out my GitHub for additional projects and contributions
                   </p>
-                  <Button asChild>
-                    <a 
-                      href="https://github.com/wangenga" 
-                      target="_blank" 
+                  <Button asChild className="site-link-button">
+                    <a
+                      href="https://github.com/wangenga"
+                      target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 site-link-button"
+                      className="flex items-center gap-2"
                     >
                       <GithubIcon className="h-4 w-4" />
-                      Visit GitHub Profile
+                      Visit GitHub profile
                     </a>
                   </Button>
-                </CardContent>
-              </Card>
-            </div>  
+              </div>
+            </div>
           </div>
         </Container>
       </div>
