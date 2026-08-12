@@ -24,7 +24,7 @@ const about = () => {
     "Drizzle ORM",
     "Node.js / Express",
     "REST APIs",
-    "Generative AI"
+    "Generative AI",
   ];
 
   const softwareTools = [
