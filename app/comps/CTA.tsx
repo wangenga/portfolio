@@ -7,21 +7,20 @@ const CTA = () => {
   return (
     <section className="py-20 px-4">
         <div className="container mx-auto">
-          <Card className="max-w-2xl mx-auto shadow-elegant">
-            <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4">Let&#39;s Work Together</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                I&#39;m always interested in new opportunities and challenging projects. 
+          <div className='card-flat max-w-2xl mx-auto p-10 text-center'>
+            <p className='eyebrow mb-3 ujustify-center flex'>contact</p>
+            <h3 className="serif text-3xl mb-4">Let&#39;s work together</h3>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                I&#39;m always interested in new opportunities and challenging projects.
                 Let&#39;s discuss how we can bring your ideas to life.
               </p>
-              <Button size="lg" asChild>
+              <Button size="lg" className="my-gradient-button" asChild>
                 <a href="mailto:daisyimg65@gmail.com" className="flex items-center gap-2">
-                  <Mail className="h-5 w-5" />
-                  Start a Conversation
+                  <Mail className="h-4 w-4" />
+                  Start a conversation
                 </a>
               </Button>
-            </CardContent>
-          </Card>
+          </div>
         </div>
       </section>
   )
