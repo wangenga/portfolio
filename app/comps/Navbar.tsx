@@ -6,16 +6,24 @@ import { usePathname } from 'next/navigation';
 import { X, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Container from './Container';
+import { useToast } from './Toast';
 
 const Navbar = () => {
   const pathname= usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const {showToast} = useToast();
 
   const navItems =[
     {name: "Home", path: "/"},
     {name: "About", path: "/about"},
     {name: "Projects", path: "/projects"}
   ];
+
+  const handleContactClick = () => {
+    navigator.clipboard.writeText("daisyimg65@gmail.com")
+    .then(() => showToast('Email copied: daisyimg65@gmail.com'))
+    .catch(() => showToast('daisyimg65@gmail.com'));
+  }
 
 
   return (
@@ -38,8 +46,8 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
-                <Button variant="default" size="sm" className='my-gradient-button' asChild>
-                  <a href="mailto:daisyimg65@gmail.com">Contact</a>
+                <Button variant="default" size="sm" asChild className='my-gradient-button'>
+                  <a href="mailto:daisyimg65@gmail.com" onClick={handleContactClick}>Contact</a>
                 </Button>
             </div>
 
@@ -69,8 +77,8 @@ const Navbar = () => {
                     {item.name}
                   </Link>
                 ))}
-                <Button variant="default" size="sm" asChild className="w-fit my-gradient-button">
-                  <a href="mailto:daisyimg65@gmail.com">Contact</a>
+                <Button variant="default" size="sm" asChild className='w-fit my-gradient-button'>
+                  <a href="mailto:daisyimg65@gmail.com" onClick={handleContactClick}>Contact</a>
                 </Button>
               </div>
             </div>

@@ -3,11 +3,11 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-export default function Tracker() {
+export default function Shayelo() {
   const pathname = usePathname();
 
   useEffect(() => {
-    fetch("/api/track", {
+    fetch("/api/a", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ page: pathname }),
