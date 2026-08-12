@@ -1,7 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
-import Tracker from "./comps/Tracker";
+import Shayelo from "./comps/Shayelo";
+import { ToastProvider } from "./comps/Toast";
 
 
 const geistSans = Geist({
@@ -40,8 +41,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased`}>
-        <Tracker />
-        {children}
+        <ToastProvider>
+          <Shayelo />
+          {children}
+        </ToastProvider>
       </body>
     </html>
   );

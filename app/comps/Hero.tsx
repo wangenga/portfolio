@@ -43,7 +43,7 @@ const Hero = () => {
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" className="code-button">
-                  <a href="/Daisy Wangenga Resume.pdf" download className='flex item-center gap-2'>
+                  <a href="/DaisyWangengaResume.pdf" download className='flex item-center gap-2'>
                     <DownloadIcon className="h-5 w-5 " />
                     Download CV
                   </a>
